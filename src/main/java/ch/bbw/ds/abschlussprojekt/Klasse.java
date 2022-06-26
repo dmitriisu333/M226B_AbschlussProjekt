@@ -7,19 +7,25 @@ public class Klasse {
     private Long klasseID;
     private String klasseName;
     private int klasseNummer;
-    private ArrayList<Student> liste;
+    private ArrayList<Student> studentListe;
     private Lehrer klassenlehrer;
     public Klasse(Long klasseID, String klasseName, int klasseNummer, Student s, Lehrer l){
         this.klasseID = klasseID;
         this.klasseName = klasseName;
         this.klasseNummer = klasseNummer;
-        this.liste = new ArrayList<>();
-        Collections.addAll(this.liste, s);
         this.klassenlehrer = l;
+        this.studentListe = new ArrayList<>();
+        Collections.addAll(this.studentListe, s);
     }
 
     public void addStudent (Student s) {
-        this.liste.add(s);
+        this.studentListe.add(s);
+    }
+
+    public void removeStudent(Student s){
+        if(this.studentListe.size() > 1) {
+            this.studentListe.remove(s);
+        }
     }
 
     public Long getKlasseID() {
@@ -47,11 +53,11 @@ public class Klasse {
     }
 
     public ArrayList<Student> getListe() {
-        return liste;
+        return studentListe;
     }
 
     public void setListe(ArrayList<Student> liste) {
-        this.liste = liste;
+        this.studentListe = liste;
     }
 
     public Lehrer getKlassenlehrer() {
