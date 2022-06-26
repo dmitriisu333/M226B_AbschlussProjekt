@@ -5,7 +5,7 @@ public class Lehrer extends Person{
     private int lohnVerdient;
     public Lehrer(Long id, String name, String vorname, int alter,
                   String geschlecht, String email, String telefonnummer,
-                  Addresse adresse,int lohn, int lohnVerdient) {
+                  Addresse adresse,int lohn) {
         super(id, name, vorname, alter, geschlecht, email, telefonnummer, adresse);
         this.lohn=lohn;
         this.lohnVerdient=0;

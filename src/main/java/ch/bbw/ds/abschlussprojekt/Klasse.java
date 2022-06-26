@@ -9,13 +9,12 @@ public class Klasse {
     private int klasseNummer;
     private ArrayList<Student> studentListe;
     private Lehrer klassenlehrer;
-    public Klasse(Long klasseID, String klasseName, int klasseNummer, Student s, Lehrer l){
+    public Klasse(Long klasseID, String klasseName, int klasseNummer, Lehrer l){
         this.klasseID = klasseID;
         this.klasseName = klasseName;
         this.klasseNummer = klasseNummer;
         this.klassenlehrer = l;
         this.studentListe = new ArrayList<>();
-        Collections.addAll(this.studentListe, s);
     }
 
     public void addStudent (Student s) {
