@@ -1,3 +1,5 @@
+package ch.bbw.ds.abschlussprojekt;
+
 public class Lehrer extends Person{
     private int lohn;
     private int lohnVerdient;
@@ -23,7 +25,7 @@ public class Lehrer extends Person{
 
     @Override
     public String toString() {
-        return "Lehrer " + name + " "
+        return "ch.bbw.ds.abschlussprojekt.Lehrer " + name + " "
                 + vorname + " "
                 + " hat verdient: "
                 + lohnVerdient;

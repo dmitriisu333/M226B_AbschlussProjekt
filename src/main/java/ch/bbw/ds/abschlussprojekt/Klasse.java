@@ -1,3 +1,5 @@
+package ch.bbw.ds.abschlussprojekt;
+
 import java.util.ArrayList;
 import java.util.Collections;
 

@@ -1,3 +1,5 @@
+package ch.bbw.ds.abschlussprojekt;
+
 public class Person {
     protected Long id;
     protected String name;
