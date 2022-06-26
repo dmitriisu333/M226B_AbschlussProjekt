@@ -1,12 +1,12 @@
 public class Person {
-    private Long id;
-    private String name;
-    private String vorname;
-    private int alter;
-    private String geschlecht;
-    private String email;
-    private String telefonnummer;
-    private Addresse adresse;
+    protected Long id;
+    protected String name;
+    protected String vorname;
+    protected int alter;
+    protected String geschlecht;
+    protected String email;
+    protected String telefonnummer;
+    protected Addresse adresse;
 
     public Person(Long id, String name, String vorname, int alter, String geschlecht, String email, String telefonnummer, Addresse adresse) {
         this.id = id;
