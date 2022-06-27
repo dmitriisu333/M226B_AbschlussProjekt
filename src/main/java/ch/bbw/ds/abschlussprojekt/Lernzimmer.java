@@ -64,4 +64,16 @@ public class Lernzimmer {
     public void setAnzahlDrucker(int anzahlDrucker) {
         this.anzahlDrucker = anzahlDrucker;
     }
+
+    @Override
+    public String toString() {
+        return "Lernzimmer{" +
+                "lernzimmerID=" + lernzimmerID +
+                ", lernzimmerNummer=" + lernzimmerNummer +
+                ", anzahlSitzplaetze=" + anzahlSitzplaetze +
+                ", anzahlTafel=" + anzahlTafel +
+                ", anzahlProjektoren=" + anzahlProjektoren +
+                ", anzahlDrucker=" + anzahlDrucker +
+                '}';
+    }
 }

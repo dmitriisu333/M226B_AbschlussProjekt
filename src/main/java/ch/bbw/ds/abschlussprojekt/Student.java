@@ -8,4 +8,17 @@ public class Student extends Person{
 
     }
 
+    @Override
+    public String toString() {
+        return "Student{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", vorname='" + vorname + '\'' +
+                ", alter=" + alter +
+                ", geschlecht='" + geschlecht + '\'' +
+                ", email='" + email + '\'' +
+                ", telefonnummer='" + telefonnummer + '\'' +
+                ", adresse=" + adresse +
+                '}';
+    }
 }

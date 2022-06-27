@@ -84,4 +84,5 @@ public class Person {
     public void setAdresse(Addresse adresse) {
         this.adresse = adresse;
     }
+
 }

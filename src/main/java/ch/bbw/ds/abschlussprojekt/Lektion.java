@@ -17,6 +17,7 @@ public class Lektion {
         this.lernzimmer = lernzimmer;
     }
 
+
     public Long getLektionID() {
         return lektionID;
     }
@@ -63,5 +64,17 @@ public class Lektion {
 
     public void setDauer(int dauer) {
         this.dauer = dauer;
+    }
+
+    @Override
+    public String toString() {
+        return "Lektion{" +
+                "lektionID=" + lektionID +
+                ", dauer=" + dauer +
+                ", modul=" + modul +
+                ", klasse=" + klasse +
+                ", lehrer=" + lehrer +
+                ", lernzimmer=" + lernzimmer +
+                '}';
     }
 }

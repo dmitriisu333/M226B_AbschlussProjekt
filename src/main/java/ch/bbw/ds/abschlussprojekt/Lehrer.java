@@ -1,18 +1,19 @@
 package ch.bbw.ds.abschlussprojekt;
 
-public class Lehrer extends Person{
+public class Lehrer extends Person {
     private int lohn;
     private int lohnVerdient;
+
     public Lehrer(Long id, String name, String vorname, int alter,
                   String geschlecht, String email, String telefonnummer,
-                  Addresse adresse,int lohn) {
+                  Addresse adresse, int lohn) {
         super(id, name, vorname, alter, geschlecht, email, telefonnummer, adresse);
-        this.lohn=lohn;
-        this.lohnVerdient=0;
+        this.lohn = lohn;
+        this.lohnVerdient = 0;
     }
 
-    public void lohnBekommen(int lohn){
-        lohnVerdient+=lohn;
+    public void lohnBekommen(int lohn) {
+        lohnVerdient += lohn;
     }
 
     public int getLohn() {
@@ -25,9 +26,18 @@ public class Lehrer extends Person{
 
     @Override
     public String toString() {
-        return "ch.bbw.ds.abschlussprojekt.Lehrer " + name + " "
-                + vorname + " "
-                + " hat verdient: "
-                + lohnVerdient;
+        return "Lehrer{" +
+                ", id=" + id +
+                ", name='" + name + '\'' +
+                ", vorname='" + vorname + '\'' +
+                ", alter=" + alter +
+                ", geschlecht='" + geschlecht + '\'' +
+                ", email='" + email + '\'' +
+                ", telefonnummer='" + telefonnummer + '\'' +
+                ", adresse=" + adresse +
+                "lohn=" + lohn +
+                ", lohnVerdient=" + lohnVerdient
+                + '}'
+                ;
     }
 }

@@ -55,4 +55,15 @@ public class Addresse {
     public void setKanton(String kanton) {
         this.kanton = kanton;
     }
+
+    @Override
+    public String toString() {
+        return "Addresse{" +
+                "hausnummer=" + hausnummer +
+                ", strasse='" + strasse + '\'' +
+                ", stadt='" + stadt + '\'' +
+                ", zip='" + zip + '\'' +
+                ", kanton='" + kanton + '\'' +
+                '}';
+    }
 }

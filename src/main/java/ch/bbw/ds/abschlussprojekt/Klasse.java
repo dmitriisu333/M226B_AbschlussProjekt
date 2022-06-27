@@ -9,16 +9,24 @@ public class Klasse {
     private int klasseNummer;
     private ArrayList<Student> studentListe;
     private Lehrer klassenlehrer;
-    public Klasse(Long klasseID, String klasseName, int klasseNummer, Lehrer l){
+    private int capacity;
+
+    public Klasse(Long klasseID, String klasseName, int klasseNummer, Lehrer l, int maxNumberOfStudents){
         this.klasseID = klasseID;
         this.klasseName = klasseName;
         this.klasseNummer = klasseNummer;
         this.klassenlehrer = l;
         this.studentListe = new ArrayList<>();
+        capacity = maxNumberOfStudents;
     }
 
+    //spaeter um trycatch umwandeln
     public void addStudent (Student s) {
-        this.studentListe.add(s);
+        if(studentListe.size() == capacity){
+            System.out.println("Diese Klasse ist voll");
+        } else {
+            this.studentListe.add(s);
+        }
     }
 
     public void removeStudent(Student s){
@@ -65,5 +73,17 @@ public class Klasse {
 
     public void setKlassenlehrer(Lehrer klassenlehrer) {
         this.klassenlehrer = klassenlehrer;
+    }
+
+    @Override
+    public String toString() {
+        return "Klasse{" +
+                "klasseID=" + klasseID +
+                ", klasseName='" + klasseName + '\'' +
+                ", klasseNummer=" + klasseNummer +
+                ", studentListe=" + studentListe +
+                ", klassenlehrer=" + klassenlehrer +
+                ", capacity=" + capacity +
+                '}';
     }
 }

@@ -44,4 +44,14 @@ public class Modul {
     public void setBeschreibung(String beschreibung) {
         this.beschreibung = beschreibung;
     }
+
+    @Override
+    public String toString() {
+        return "Modul{" +
+                "modulID=" + modulID +
+                ", modulNummer=" + modulNummer +
+                ", modulName='" + modulName + '\'' +
+                ", beschreibung='" + beschreibung + '\'' +
+                '}';
+    }
 }
