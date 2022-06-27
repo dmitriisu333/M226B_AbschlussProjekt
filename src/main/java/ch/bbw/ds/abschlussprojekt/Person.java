@@ -1,6 +1,6 @@
 package ch.bbw.ds.abschlussprojekt;
 
-public class Person {
+public abstract class Person {
     protected Long id;
     protected String name;
     protected String vorname;
@@ -21,68 +21,36 @@ public class Person {
         this.adresse = adresse;
     }
 
-    public Long getId() {
-        return id;
-    }
+    public abstract Long getId();
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+    public abstract void setId(Long id);
 
-    public String getName() {
-        return name;
-    }
+    public abstract String getName();
 
-    public void setName(String name) {
-        this.name = name;
-    }
+    public abstract void setName(String name);
 
-    public String getVorname() {
-        return vorname;
-    }
+    public abstract String getVorname();
 
-    public void setVorname(String vorname) {
-        this.vorname = vorname;
-    }
+    public abstract void setVorname(String vorname);
 
-    public int getAlter() {
-        return alter;
-    }
+    public abstract int getAlter();
 
-    public void setAlter(int alter) {
-        this.alter = alter;
-    }
+    public abstract void setAlter(int alter);
 
-    public String getGeschlecht() {
-        return geschlecht;
-    }
+    public abstract String getGeschlecht();
 
-    public void setGeschlecht(String geschlecht) {
-        this.geschlecht = geschlecht;
-    }
+    public abstract void setGeschlecht(String geschlecht);
 
-    public String getEmail() {
-        return email;
-    }
+    public abstract String getEmail();
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
+    public abstract void setEmail(String email);
 
-    public String getTelefonnummer() {
-        return telefonnummer;
-    }
+    public abstract String getTelefonnummer();
 
-    public void setTelefonnummer(String telefonnummer) {
-        this.telefonnummer = telefonnummer;
-    }
+    public abstract void setTelefonnummer(String telefonnummer);
 
-    public Addresse getAdresse() {
-        return adresse;
-    }
+    public abstract Addresse getAdresse();
 
-    public void setAdresse(Addresse adresse) {
-        this.adresse = adresse;
-    }
+    public abstract void setAdresse(Addresse adresse);
 
 }

@@ -10,6 +10,7 @@ public class Klasse {
     private ArrayList<Student> studentListe;
     private Lehrer klassenlehrer;
     private int capacity;
+    private ArrayList<Lektion> stundenplan;
 
     public Klasse(Long klasseID, String klasseName, int klasseNummer, Lehrer l, int maxNumberOfStudents){
         this.klasseID = klasseID;
@@ -18,6 +19,11 @@ public class Klasse {
         this.klassenlehrer = l;
         this.studentListe = new ArrayList<>();
         capacity = maxNumberOfStudents;
+        this.stundenplan = new ArrayList<>();
+    }
+
+    public void addLektion (Lektion l) {
+        this.stundenplan.add(l);
     }
 
     //spaeter um trycatch umwandeln
@@ -33,6 +39,30 @@ public class Klasse {
         if(this.studentListe.size() > 1) {
             this.studentListe.remove(s);
         }
+    }
+
+    public ArrayList<Student> getStudentListe() {
+        return studentListe;
+    }
+
+    public void setStudentListe(ArrayList<Student> studentListe) {
+        this.studentListe = studentListe;
+    }
+
+    public int getCapacity() {
+        return capacity;
+    }
+
+    public void setCapacity(int capacity) {
+        this.capacity = capacity;
+    }
+
+    public ArrayList<Lektion> getStundenplan() {
+        return stundenplan;
+    }
+
+    public void setStundenplan(ArrayList<Lektion> stundenplan) {
+        this.stundenplan = stundenplan;
     }
 
     public Long getKlasseID() {

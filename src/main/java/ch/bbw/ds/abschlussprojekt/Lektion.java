@@ -4,16 +4,12 @@ public class Lektion {
     private Long lektionID;
     private int dauer;
     private Modul modul;
-    private Klasse klasse;
-    private Lehrer lehrer;
     private Lernzimmer lernzimmer;
 
-    public Lektion(long lektionID, int dauer, Modul modul, Klasse klasse, Lehrer lehrer, Lernzimmer lernzimmer) {
+    public Lektion(long lektionID, int dauer, Modul modul, Lernzimmer lernzimmer) {
         this.lektionID = lektionID;
         this.dauer = dauer;
         this.modul = modul;
-        this.klasse = klasse;
-        this.lehrer = lehrer;
         this.lernzimmer = lernzimmer;
     }
 
@@ -26,25 +22,6 @@ public class Lektion {
         return modul;
     }
 
-    public void setModul(Modul modul) {
-        this.modul = modul;
-    }
-
-    public Klasse getKlasse() {
-        return klasse;
-    }
-
-    public void setKlasse(Klasse klasse) {
-        this.klasse = klasse;
-    }
-
-    public Lehrer getLehrer() {
-        return lehrer;
-    }
-
-    public void setLehrer(Lehrer lehrer) {
-        this.lehrer = lehrer;
-    }
 
     public Lernzimmer getLernzimmer() {
         return lernzimmer;
@@ -72,8 +49,6 @@ public class Lektion {
                 "lektionID=" + lektionID +
                 ", dauer=" + dauer +
                 ", modul=" + modul +
-                ", klasse=" + klasse +
-                ", lehrer=" + lehrer +
                 ", lernzimmer=" + lernzimmer +
                 '}';
     }
