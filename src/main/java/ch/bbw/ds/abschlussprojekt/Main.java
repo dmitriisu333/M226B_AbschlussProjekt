@@ -2,6 +2,7 @@ package ch.bbw.ds.abschlussprojekt;
 
 public class Main {
     public static void main(String[] args) {
+
         //Addressen
         Addresse a1 = new Addresse(13, "", "", "", "");
         Addresse a2 = new Addresse(13, "", "", "", "");
@@ -38,7 +39,7 @@ public class Main {
         k1.addStudent(sus4);
         System.out.println(k1);
 
-        //so man loescht ein Student von eine Klasse
+        //so loescht man ein Student von eine Klasse
         k1.removeStudent(sus1);
         System.out.println(k1);
 
@@ -68,5 +69,6 @@ public class Main {
 
         //zeigt Stundenplan
         lp1.printStundenplan();
+        k1.printStundenplan();
     }
 }

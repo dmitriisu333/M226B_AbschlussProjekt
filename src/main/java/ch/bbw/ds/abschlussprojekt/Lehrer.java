@@ -7,6 +7,7 @@ public class Lehrer extends Person {
     private int lohn;
     private int lohnVerdient;
     private ArrayList<Lektion> stundenplan;
+    int stundenplanCapacity = 8;
     public Lehrer(Long id, String name, String vorname, int alter,
                   String geschlecht, String email, String telefonnummer,
                   Addresse adresse, int lohn) {
@@ -17,10 +18,19 @@ public class Lehrer extends Person {
     }
 
     public void addLektion (Lektion l) {
-        this.stundenplan.add(l);
+        try {
+            if (stundenplan.size() == stundenplanCapacity) {
+                throw new AbschlussprojektException();
+            } else {
+                this.stundenplan.add(l);
+            }
+        } catch (AbschlussprojektException e) {
+            System.out.println("Ein Lehrer kann nicht mehr als 8 Lektionen haben");
+        }
     }
 
     public void printStundenplan(){
+        //soll mehr lesbar sein
         System.out.println(stundenplan);
     }
 

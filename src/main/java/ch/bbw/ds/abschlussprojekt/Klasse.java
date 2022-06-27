@@ -11,6 +11,7 @@ public class Klasse {
     private Lehrer klassenlehrer;
     private int capacity;
     private ArrayList<Lektion> stundenplan;
+    int stundenplanCapacity = 6;
 
     public Klasse(Long klasseID, String klasseName, int klasseNummer, Lehrer l, int maxNumberOfStudents){
         this.klasseID = klasseID;
@@ -23,22 +24,45 @@ public class Klasse {
     }
 
     public void addLektion (Lektion l) {
-        this.stundenplan.add(l);
+        try {
+            if (stundenplan.size() == stundenplanCapacity) {
+                throw new AbschlussprojektException();
+            } else {
+                this.stundenplan.add(l);
+            }
+        } catch (AbschlussprojektException e) {
+            System.out.println("Diese Klasse ist voll");
+        }
     }
 
-    //spaeter um trycatch umwandeln
+
     public void addStudent (Student s) {
-        if(studentListe.size() == capacity){
-            System.out.println("Diese Klasse ist voll");
-        } else {
-            this.studentListe.add(s);
+        try {
+            if (studentListe.size() == capacity) {
+                throw new AbschlussprojektException();
+            } else {
+                this.studentListe.add(s);
+            }
+        } catch (AbschlussprojektException e) {
+            System.out.println("Eine Klasse kann nicht mehr als 8 Lektionen haben");
         }
     }
 
     public void removeStudent(Student s){
-        if(this.studentListe.size() > 1) {
-            this.studentListe.remove(s);
+        try {
+            if (this.studentListe.size() > 1) {
+                this.studentListe.remove(s);
+            } else {
+                throw new AbschlussprojektException();
+            }
+        } catch (AbschlussprojektException e) {
+            System.out.println("Es muss mindestens ein Student in die Klasse bleiben");
         }
+    }
+
+    public void printStundenplan(){
+        //soll mehr lesbar sein
+        System.out.println(stundenplan);
     }
 
     public ArrayList<Student> getStudentListe() {
