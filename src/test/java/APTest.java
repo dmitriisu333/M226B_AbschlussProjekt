@@ -38,43 +38,66 @@ public class APTest {
     Lektion l5= new Lektion(4L, 45, m1, lz1);
 
     @Test
-    public void addLektionToKlasseTest() throws AbschlussprojektException {
+    public void addLektionToKlasseTest() {
+        try {
             k1.addLektion(l1);
             k1.addLektion(l2);
             k1.addLektion(l3);
             k1.addLektion(l4);
             k1.addLektion(l5);
+            fail("Etwas falsch");
+        } catch (AbschlussprojektException e) {
+            throw new RuntimeException(e);
+        }
+
     }
 
     @Test
-    public void addLektionToLehrerTest() throws AbschlussprojektException {
+    public void addLektionToLehrerTest()  {
+        try {
             lp1.addLektion(l1);
             lp1.addLektion(l2);
             lp1.addLektion(l3);
             lp1.addLektion(l4);
+            fail("Etwas falsch");
+        } catch (AbschlussprojektException e) {
+            throw new RuntimeException(e);
+        }
+
     }
 
     @Test
-    public void addStudentToKlasseTest() throws AbschlussprojektException {
+    public void addStudentToKlasseTest() {
+        try {
             k1.addStudent(sus1);
             k1.addStudent(sus2);
             k1.addStudent(sus3);
             k1.addStudent(sus4);
             k1.addStudent(sus5);
+            fail("Etwas falsch");
+        } catch (AbschlussprojektException e) {
+            throw new RuntimeException(e);
+        }
+
     }
 
     @Test
-    public void removeStudentTest() throws AbschlussprojektException {
-        k1.addStudent(sus1);
-        k1.addStudent(sus2);
-        k1.addStudent(sus3);
-        k1.addStudent(sus4);
+    public void removeStudentTest()  {
+        try {
+            k1.addStudent(sus1);
+            k1.addStudent(sus2);
+            k1.addStudent(sus3);
+            k1.addStudent(sus4);
 
 
-        k1.removeStudent(sus1);
-        k1.removeStudent(sus4);
-        k1.removeStudent(sus3);
-        k1.removeStudent(sus2);
+            k1.removeStudent(sus1);
+            k1.removeStudent(sus4);
+            k1.removeStudent(sus3);
+            k1.removeStudent(sus2);
+            fail("Etwas falsch");
+        } catch (AbschlussprojektException e) {
+            throw new RuntimeException(e);
+        }
 
     }
 
