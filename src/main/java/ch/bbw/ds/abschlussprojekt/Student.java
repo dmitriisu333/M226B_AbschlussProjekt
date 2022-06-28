@@ -1,5 +1,10 @@
 package ch.bbw.ds.abschlussprojekt;
 
+/**
+ * @Autor Dmitrii Subeichin
+ * @Version 28.06.22
+ */
+
 public class Student extends Person{
 
     public Student(Long id, String name, String vorname, int alter, String geschlecht,

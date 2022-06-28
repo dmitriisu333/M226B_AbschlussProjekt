@@ -1,5 +1,10 @@
 package ch.bbw.ds.abschlussprojekt;
 
+/**
+ * @Autor Dmitrii Subeichin
+ * @Version 28.06.22
+ */
+
 public abstract class Person {
     protected Long id;
     protected String name;

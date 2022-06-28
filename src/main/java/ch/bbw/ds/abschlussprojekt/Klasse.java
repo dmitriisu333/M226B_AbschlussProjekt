@@ -3,6 +3,11 @@ package ch.bbw.ds.abschlussprojekt;
 import java.util.ArrayList;
 import java.util.Collections;
 
+/**
+ * @Autor Dmitrii Subeichin
+ * @Version 28.06.22
+ */
+
 public class Klasse {
     private Long klasseID;
     private String klasseName;
@@ -11,7 +16,7 @@ public class Klasse {
     private Lehrer klassenlehrer;
     private int capacity;
     private ArrayList<Lektion> stundenplan;
-    int stundenplanCapacity = 6;
+    int stundenplanCapacity = 4;
 
     public Klasse(Long klasseID, String klasseName, int klasseNummer, Lehrer l, int maxNumberOfStudents){
         this.klasseID = klasseID;
@@ -23,41 +28,30 @@ public class Klasse {
         this.stundenplan = new ArrayList<>();
     }
 
-    public void addLektion (Lektion l) {
-        try {
+    public void addLektion (Lektion l) throws AbschlussprojektException {
             if (stundenplan.size() == stundenplanCapacity) {
-                throw new AbschlussprojektException();
+                throw new AbschlussprojektException("Eine Klasse kann maximum 4 lektionen haben");
             } else {
                 this.stundenplan.add(l);
             }
-        } catch (AbschlussprojektException e) {
-            System.out.println("Diese Klasse ist voll");
-        }
     }
 
 
-    public void addStudent (Student s) {
-        try {
+    public void addStudent (Student s) throws AbschlussprojektException {
             if (studentListe.size() == capacity) {
-                throw new AbschlussprojektException();
+                throw new AbschlussprojektException("Diese Klasse ist voll");
             } else {
                 this.studentListe.add(s);
             }
-        } catch (AbschlussprojektException e) {
-            System.out.println("Eine Klasse kann nicht mehr als 8 Lektionen haben");
-        }
     }
 
-    public void removeStudent(Student s){
-        try {
+    public void removeStudent(Student s) throws AbschlussprojektException {
             if (this.studentListe.size() > 1) {
                 this.studentListe.remove(s);
             } else {
-                throw new AbschlussprojektException();
+                throw new AbschlussprojektException("Es muss mindestens ein Student in die Klasse bleiben");
             }
-        } catch (AbschlussprojektException e) {
-            System.out.println("Es muss mindestens ein Student in die Klasse bleiben");
-        }
+
     }
 
     public void printStundenplan(){

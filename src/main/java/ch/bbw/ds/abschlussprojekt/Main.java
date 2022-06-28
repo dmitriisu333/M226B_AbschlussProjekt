@@ -1,7 +1,12 @@
 package ch.bbw.ds.abschlussprojekt;
 
+/**
+ * @Autor Dmitrii Subeichin
+ * @Version 28.06.22
+ */
+
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws AbschlussprojektException {
 
         //Addressen
         Addresse a1 = new Addresse(13, "", "", "", "");
@@ -55,9 +60,10 @@ public class Main {
         Lektion l2 = new Lektion(2L, 45, m1, lz1);
         Lektion l3 = new Lektion(3L, 45, m1, lz1);
         Lektion l4= new Lektion(4L, 45, m1, lz1);
+        Lektion l5= new Lektion(5L, 45, m1, lz1);
+
 
         //erstellt Stundenplan
-        lp1.addLektion(l1);
         lp1.addLektion(l1);
         lp1.addLektion(l1);
         lp1.addLektion(l1);
@@ -66,6 +72,7 @@ public class Main {
         k1.addLektion(l2);
         k1.addLektion(l3);
         k1.addLektion(l4);
+
 
         //zeigt Stundenplan
         lp1.printStundenplan();

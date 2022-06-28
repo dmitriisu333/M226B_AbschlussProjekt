@@ -3,11 +3,16 @@ package ch.bbw.ds.abschlussprojekt;
 import java.util.ArrayList;
 import java.util.Collections;
 
+/**
+ * @Autor Dmitrii Subeichin
+ * @Version 28.06.22
+ */
+
 public class Lehrer extends Person {
     private int lohn;
     private int lohnVerdient;
     private ArrayList<Lektion> stundenplan;
-    int stundenplanCapacity = 8;
+    int stundenplanCapacity = 3;
     public Lehrer(Long id, String name, String vorname, int alter,
                   String geschlecht, String email, String telefonnummer,
                   Addresse adresse, int lohn) {
@@ -17,16 +22,14 @@ public class Lehrer extends Person {
         this.stundenplan = new ArrayList<>();
     }
 
-    public void addLektion (Lektion l) {
-        try {
+    public void addLektion (Lektion l) throws AbschlussprojektException {
+
             if (stundenplan.size() == stundenplanCapacity) {
-                throw new AbschlussprojektException();
+                throw new AbschlussprojektException("Ein Lehrer kann maximum 3 Lektionen haben");
             } else {
                 this.stundenplan.add(l);
             }
-        } catch (AbschlussprojektException e) {
-            System.out.println("Ein Lehrer kann nicht mehr als 8 Lektionen haben");
-        }
+
     }
 
     public void printStundenplan(){

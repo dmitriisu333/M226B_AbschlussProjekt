@@ -1,5 +1,11 @@
 package ch.bbw.ds.abschlussprojekt;
 
+/**
+ * @Autor Dmitrii Subeichin
+ * @Version 28.06.22
+ */
+
+
 public class Lernzimmer {
     private Long lernzimmerID;
     private int lernzimmerNummer;
