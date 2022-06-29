@@ -11,6 +11,7 @@ import java.util.Collections;
 public class Lehrer extends Person {
 
     private int feature1;
+    private int feature2;
     private int lohn;
     private int lohnVerdient;
     private ArrayList<Lektion> stundenplan;
